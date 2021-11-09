@@ -13,7 +13,7 @@ import '../box-styles.css'
 // 🐨 add a style prop to each of them as well so their background color
 // matches what the text says it should be as well as `fontStyle: 'italic'`
 
-const Box = ({style, size, ...otherProps}) => {
+const Box = ({style, size, className = '', ...otherProps}) => {
   const sizeName = size ? `box--${size}` : ''
   return (
     <div 
