@@ -28,13 +28,15 @@ function App() {
         add item
       </button>
       <ul style={{listStyle: 'none', paddingLeft: 0}}>
-        {items.map(item => (
-          <li key={item.id}>
-            <button onClick={() => removeItem(item)}>remove</button>{' '}
-            <label htmlFor={`${item.id}-input`}>{item.value}</label>{' '}
-            <input id={`${item.id}-input`} defaultValue={item.value} />
-          </li>
-        ))}
+        {items.map(item => {
+          return (
+            <li key={item.id}>
+              <button onClick={() => removeItem(item)}>remove</button>{' '}
+              <label htmlFor={`${item.id}-input`}>{item.value}</label>{' '}
+              <input id={`${item.id}-input`} defaultValue={item.value} />
+            </li>
+            )
+          })}
       </ul>
     </div>
   )
